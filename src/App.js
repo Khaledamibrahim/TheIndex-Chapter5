@@ -7,6 +7,7 @@ import Sidebar from "./Sidebar";
 import Loading from "./Loading";
 import AuthorsList from "./AuthorsList";
 import AuthorDetail from "./AuthorDetail";
+import Booklist from "./Booklist";
 
 const instance = axios.create({
   baseURL: "https://the-index-api.herokuapp.com"
@@ -50,6 +51,7 @@ class App extends Component {
               <AuthorsList {...props} authors={this.state.authors} />
             )}
           />
+          <Route path="/books" component={Booklist} />
         </Switch>
       );
     }
